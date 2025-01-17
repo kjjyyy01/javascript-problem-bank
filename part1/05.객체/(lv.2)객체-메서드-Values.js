@@ -10,7 +10,9 @@
  * @returns {string[]}
  */
 function getObjectValues(obj) {
-  // TODO
+    // TODO
+    let newObj = Object.values(obj);
+    return newObj;
 }
 
 // export를 수정하지 마세요.
