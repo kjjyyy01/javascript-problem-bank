@@ -8,11 +8,17 @@
  * @param {object} obj
  * @returns {number}
  */
+
 function countProperties(obj) {
     // TODO
+    let count = 0;
+
     for (const key in obj) {
-        return key;
+        if (obj.hasOwnProperty(key)) {
+            count++;
+        }
     }
+    return count;
 }
 
 export { countProperties };
