@@ -21,17 +21,14 @@
 
 // TODO: findUserByName 함수를 작성하세요.
 function findUserByName(users, name) {
-    const sameName = users.find((param) => {
-        param.name === name;
-    });
+    const sameName = users.find((element) => element.name === name);
     return sameName || null;
 }
 
 // TODO: findIndexOf 함수를 작성하세요.
 function findIndexOf(arr, value) {
-    return arr.findIndex((param) => {
-        param.value === value;
-    });
+    const index = arr.findIndex((element) => element === value);
+    return index;
 }
 
 // export를 수정하지 마세요.
