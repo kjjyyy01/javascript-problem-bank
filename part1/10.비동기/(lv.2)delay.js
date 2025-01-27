@@ -9,7 +9,8 @@
  */
 
 function delay(ms) {
-  // TODO: delay 함수를 작성하세요.
+    // TODO: delay 함수를 작성하세요.
+    setTimeout(() => {}, 1000);
 }
 
 // export를 수정하지 마세요.
