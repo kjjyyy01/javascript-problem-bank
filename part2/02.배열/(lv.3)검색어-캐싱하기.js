@@ -16,12 +16,21 @@
 let topKeywordsCache = [];
 
 function updateTopKeywords(keywords) {
+  const newMap = new Map();
   // TODO
+  keywords.forEach((element) => {
+    newMap.set(element, (newMap.get(element) || 0) + 1);
+  });
+
+  topKeywordsCache = [...newMap.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([word]) => word)
+    .slice(0, 10);
 }
 
 function getTopKeywords() {
   // TODO
-  return [];
+  return topKeywordsCache;
 }
 
 // export를 수정하지 마세요.
