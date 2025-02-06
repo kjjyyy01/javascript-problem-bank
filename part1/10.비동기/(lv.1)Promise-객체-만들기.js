@@ -9,10 +9,10 @@
  */
 
 let resolvePromise = new Promise((resolve) => {
-    resolve("Hello");
+  resolve("Hello");
 });
 let rejectPromise = new Promise((_, reject) => {
-    reject("Error!");
+  reject("Error!");
 });
 
 // export를 수정하지 마세요.
