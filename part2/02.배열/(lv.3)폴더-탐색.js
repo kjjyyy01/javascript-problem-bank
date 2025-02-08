@@ -18,7 +18,17 @@
  */
 
 // TODO: getAllFolderNames 함수를 작성하세요.
-function getAllFolderNames(folder) {}
+function getAllFolderNames(folder) {
+  // 현재 폴더 이름을 저장
+  let names = [folder.name];
+
+  // 하위 폴더가 있다면 재귀적으로 호출하여 이름을 추가
+  for (const subFolder of folder.subFolders) {
+    names = names.concat(getAllFolderNames(subFolder));
+  }
+
+  return names;
+}
 
 // export 를 수정하지 마세요.
 export { getAllFolderNames };
